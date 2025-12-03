@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vodafone Group — News</title>
+  <meta name="description" content="Latest news and updates about Vodafone Group. Replace the placeholder content with the latest story." />
+
+  <!-- SEO / Social -->
+  <meta property="og:title" content="Vodafone Group — News" />
+  <meta property="og:description" content="Latest news and updates about Vodafone Group." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="/assets/vodafone-og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <style>
+    :root{ --bg:#0f1724; --card:#ffffff; --muted:#6b7280; --accent:#e60000; --maxw:900px }
+    *{box-sizing:border-box}
+    body{font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif; margin:0; background:#f7f9fb; color:#0b1220; line-height:1.6}
+    .container{max-width:var(--maxw); margin:36px auto; padding:0 20px}
+    header.site{display:flex; align-items:center; gap:16px; margin-bottom:24px}
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo{width:56px; height:56px; border-radius:8px; background:linear-gradient(135deg,#ff4b4b,#ff8a00); display:flex; align-items:center; justify-content:center; color:white; font-weight:700}
+    h1.page-title{font-size:1.6rem; margin:0}
+    .meta{color:var(--muted); font-size:0.95rem}
+
+    article.card{background:var(--card); border-radius:12px; padding:28px; box-shadow:0 6px 18px rgba(11,18,32,0.06)}
+    .hero{display:flex; gap:24px; flex-direction:column}
+    .hero img{width:100%; height:auto; border-radius:8px}
+    .kicker{font-size:0.85rem; color:var(--accent); font-weight:600; letter-spacing:0.6px}
+    h2.title{margin:12px 0 6px}
+    .byline{color:var(--muted); font-size:0.95rem}
+    p.lead{font-size:1.05rem; margin-top:12px}
+
+    .content{margin-top:18px}
+    .content p{margin:14px 0}
+    .tags{margin-top:18px}
+    .tag{display:inline-block; background:#fff3f3; color:var(--accent); padding:6px 10px; border-radius:999px; font-size:0.85rem; margin-right:8px}
+
+    .share{display:flex; gap:8px; margin-top:20px}
+    .btn{border:1px solid #e6e9ee; padding:8px 12px; border-radius:8px; background:white; cursor:pointer}
+
+    footer.related{margin-top:28px}
+    .related-list{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px}
+    .related-item{background:#fff; padding:12px; border-radius:8px; border:1px solid #f1f3f5}
+
+    @media(min-width:800px){ .hero{flex-direction:row} .hero .media{flex:1} .hero .summary{flex:1} }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="site">
+      <div class="brand">
+        <div class="logo">V</div>
+        <div>
+          <h1 class="page-title">Vodafone Group — News</h1>
+          <div class="meta">Trusted coverage of the latest Vodafone Group developments</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ARTICLE: Replace the placeholders (TITLE, DATE, AUTHOR, CONTENT, IMAGE) with real content -->
+    <article class="card" aria-labelledby="article-title">
+      <div class="hero">
+        <div class="media">
+          <!-- Replace src with the article image URL -->
+          <img src="/assets/placeholder-news.jpg" alt="Vodafone Group news image" />
+        </div>
+        <div class="summary">
+          <div class="kicker">Company News</div>
+          <h2 id="article-title" class="title">[ARTICLE TITLE: Replace with headline]</h2>
+          <div class="byline">By <strong>[Author Name]</strong> • <time datetime="2025-12-03">[YYYY-MM-DD]</time></div>
+          <p class="lead">[Lead paragraph — briefly summarise the most important facts. Keep it tight: 1–2 sentences]</p>
+
+          <div class="share" role="group" aria-label="Share this article">
+            <button class="btn" onclick="navigator.clipboard?.writeText(window.location.href).then(()=>alert('Link copied'))">Copy link</button>
+            <button class="btn" onclick="share('twitter')">Share on Twitter</button>
+            <button class="btn" onclick="share('linkedin')">Share on LinkedIn</button>
+          </div>
+        </div>
+      </div>
+
+      <section class="content" id="article-body">
+        <!-- Replace the paragraphs below with the article body -->
+        <p>[Paragraph 1 — full details. Use short paragraphs for readability.]</p>
+        <p>[Paragraph 2 — context, quotes, data points.]</p>
+        <p>[Paragraph 3 — implications, outlook, next steps.]</p>
+
+        <div class="tags" aria-label="Article tags">
+          <span class="tag">Vodafone</span>
+          <span class="tag">Telecom</span>
+          <span class="tag">Earnings</span>
+        </div>
+      </section>
+
+      <footer class="related" aria-labelledby="related-heading">
+        <h3 id="related-heading">Related articles</h3>
+        <div class="related-list">
+          <a class="related-item" href="#">How Vodafone is investing in 5G</a>
+          <a class="related-item" href="#">Vodafone Q3 earnings highlights</a>
+          <a class="related-item" href="#">Network sustainability initiatives</a>
+        </div>
+      </footer>
+    </article>
+
+    <p style="text-align:center; color:var(--muted); font-size:0.9rem; margin-top:18px">This is a static HTML post template — update the placeholders above with the latest information.</p>
+  </div>
+
+  <script>
+    function share(site){
+      const url = encodeURIComponent(window.location.href)
+      const title = encodeURIComponent(document.querySelector('#article-title')?.textContent || document.title)
+      let shareUrl = ''
+      if(site === 'twitter') shareUrl = `https://twitter.com/intent/tweet?text=${title}&url=${url}`
+      if(site === 'linkedin') shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`
+      if(shareUrl) window.open(shareUrl, '_blank', 'noopener')
+    }
+  </script>
+</body>
+</html>
